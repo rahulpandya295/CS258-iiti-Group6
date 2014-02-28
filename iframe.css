@@ -1,0 +1,26 @@
+.container {
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 1090px;
+	height: 500px;
+	 background: #f9f9f9;
+}
+
+h1 {
+
+	position: absolute;
+	top: 10px;
+	left: 75px;
+	width: 200px;
+	height: 50px;
+	padding-top: 10px;
+	font-size: 32px;
+	font-weight: bold;
+	text-align: left;
+	background: #f9f9f9;
+	color:#336699;
+	margin-bottom: 0px;
+	font-family: 'Lato', Arial, sans-serif;
+}
