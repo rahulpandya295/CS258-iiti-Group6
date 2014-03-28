@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/Layout0.css"/>
+	<link rel="stylesheet" type="text/css" href="css/Form.css"/>   
+	
+</head>
+
+<body>
+
+	<div class="introBar">
+		<div class="introHead1">SICDOC</div>
+		<div class="introHead2">Sophisticated Instrumentation Lab</div>
+	</div>
+	<section class="formbox">
+		<div class="formtext">Mass Spectrometry Request Form</div>
+		<div class="seperatorS"></div>	
+		<div class="infobar">General Information</div>
+    <div class="seperatorS" style="position: absolute; top: 180px; left: 65px; height: 1px; width: 500px;"></div>
+		
+		<form method="post" action="form.php" >
+			<input type="text" required title="Name required" placeholder="Name" data-icon="N" id="name" name="name"></br>
+        	<input type="text" required title="Sample Code required" placeholder="Sample Code" data-icon="S" id="scode" name="scode">
+        	<input type="text" required title="Phone No. required" placeholder="Phone Number"  style="position: absolute; top: 280px; left: 465px; width: 250px;" data-icon="P" id="phone_no" name="phone_no">
+        	<input type="text" required title="Research Group required" placeholder="Research Group" style="position: absolute; top: 375px; left: 610px; width: 210px;" data-icon="S" id="rgroup" name="rgroup"></br>
+        	<div class="Date">Date: </div>
+        	<select name="dob_month" id="dob_month" class="input_pulldown" style="width: 100px position: absolute; top:200px; left:645px;">
+ 				<option value="0">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option>               <option value="4">April</option><option value="5">May</option><option value="6" selected="selected">June</option><option value="7">July</option>    <option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option>        <option value="12">December</option>
+			</select>
+
+			<select name="dob_day" id="dob_day" class="input_pulldown" style="width: 100px position: absolute; top:200px; left:575px;">
+  				<option value="0">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>      <option value="5" selected="selected">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>                <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option>                            <option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option>                            <option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>                            <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option>                            <option value="30">30</option><option value="31">31</option>
+			</select>
+
+			<select name="dob_year" id="dob_year" class="input_pulldown" style="width: 100px position: absolute; top:200px; left:770px;">
+				<option value="0">Year</option><option value="2011">2011</option><option value="2010">2010</option>                             <option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option>            <option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option>            <option value="2001">2001</option><option value="2000">2000</option>
+			</select>
+
+			<div class="Gender">Solubility: </div>
+			<input type="checkbox" id="checkbox1" name="checkbox1" value="all">
+  			 <label for="checkbox1">CH<sub>3</sub>CN</label>
+			<input type="checkbox" id="checkbox2" name="checkbox2" value="all" >
+  			 <label for="checkbox2">MeOH<sub></sub></label>
+  			 <input type="checkbox" id="checkbox3" name="checkbox3" value="all" >
+  			 <label for="checkbox3">CHCl<sub>3</sub></label>
+  			 <input type="checkbox" id="checkbox4" name="checkbox4" value="all" >
+  			 <label for="checkbox4">IPA<sub></sub></label>
+  			 <input type="checkbox" id="checkbox5" name="checkbox5" value="all" >
+  			 <label for="checkbox5">H<sub>2</sub>O</label>
+  			 <div class="infobar" style="position: absolute; top: 550px; left: 530px; width: 350px;">(For mixtures of solvent tick on both)</div>
+        	<input type="text" required title="Email Name required" style="position: absolute; top: 375px; left: 50px; width: 470px;" placeholder="Your Email" data-icon="E" id="email" name="email"></br>
+
+
+          <div class="seperatorS" style="position: absolute; top: 515px; left: 75px; height: 1px; width: 500px;"></div>
+
+        	<div class="infobar" style="position: absolute; top: 475px; left: 50px;">Sample Information</div>
+
+        	<input type="text" required title="Hazards" placeholder="Hazards" data-icon="H" id="hazard" style="position: absolute; top: 635px; left: 50px; width: 470px;" name="hazard">
+        	<div class="infobar" style="position: absolute; top: 645px; left: 580px; width: 80px;">(if any)</div>	
+        	</br>
+
+        	<input type="text" required title="Molecular Formula required" placeholder="Molecular Formula" data-icon="M" id="mformula" style="position: absolute; top: 725px; left: 50px; width: 370px;" name="mformula">
+        	<input type="text" required title="Molecular Weight required" placeholder="Molecular Weight" data-icon="W" id="mweight" style="position: absolute; top: 725px; left: 520px; width: 170px;" name="mweight">	
+        	<div class="infobar" style="position: absolute; top: 735px; left: 750px; width: 80px;">Daltons</div>
+
+          <div class="seperatorS" style="position: absolute; top: 865px; left: 85px; height: 1px; width: 500px;"></div>
+
+        	<div class="infobar" style="position: absolute; top: 825px; left: 50px;">Request Analysis</div>
+        	
+        	<div class="Gender" style="position: absolute; top: 895px; left: 90px; width: 340px;">ESI-MS: </div>
+			     <input type="radio" id="radio1" name="radios" value="all" checked>
+  			   <label for="radio1" style="position: absolute; top: 907px; left: 200px;">Positive Mode</label>
+			     <input type="radio" id="radio2" name="radios" value="false">
+  			   <label for="radio2" style="position: absolute; top: 907px; left: 320px;">Negetive Mode</label>
+           
+           <div class="Gender" style="position: absolute; top: 975px; left: 90px; width: 340px;">HRMS: </div>
+           <input type="radio" id="radio3" name="radio5" value="all" checked>
+           <label for="radio3" style="position: absolute; top: 987px; left: 200px;">Positive Mode</label>
+           <input type="radio" id="radio4" name="radio5" value="false">
+           <label for="radio4" style="position: absolute; top: 987px; left: 320px;">Negetive Mode</label>
+
+ 
+           <div class="note">Note: These samples do not contain radioactivity.</div>
+
+
+
+        	<div class="submit"><input type="submit" name="commit" value="Submit" style="position: absolute; top: 1115px; left: 350px;"></div>
+
+
+    		</div>
+		</form>
+	</section>
+	
+</body>
+
+</html>
