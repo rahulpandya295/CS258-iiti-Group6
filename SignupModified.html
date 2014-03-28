@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/Layout0.css"/>
+	<link rel="stylesheet" type="text/css" href="css/Signup.css"/>
+	<link rel="stylesheet" type="text/css" href="css/Admin.css"/>
+	
+	<script type="text/javascript">
+		$('#dob_month, #dob_year').change(function() {
+			var year = $('#dob_year').val();
+			var month = $('#dob_month').val();
+			if ((year != 0) && (month!=0)) {
+				var lastday = 32 - new Date(year, month - 1, 32).getDate();
+				var selected_day = $('#dob_day').val();
+
+				// Change selected day if it is greater than the number of days in current month
+				if (selected_day > lastday) {
+					$('#dob_day > option[value=' + selected_day + ']').attr('selected', false);
+					$('#dob_day > option[value=' + lastday + ']').attr('selected', true);
+				}
+
+				// Remove possibly offending days
+				for (var i = lastday + 1; i < 32; i++) {
+					$('#dob_day > option[value=' + i + ']').remove();	
+				}
+
+				// Add possibly missing days
+				for (var i = 29; i < lastday + 1; i++) {
+					if (!$('#dob_day > option[value=' + i + ']').length) {
+						$('#dob_day').append($("<option></option>").attr("value",i).text(i));
+					} 
+				}
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<div class="introBar">
+		<div class="introHead1">SICDOC</div>
+		<div class="introHead2">Sophisticated Instrumentation Lab</div>
+	</div>
+	<section class="Signupbox">
+		<div class="Signuptext">Sign Up</div>
+		<div class="seperatorS"></div>
+		<form method="post" action="signup.php" >
+			<input type="text" required title="First Name required" placeholder="First Name" data-icon="F" id="first_name" name="first_name"></br>
+        	<input type="text" required title="Last Name required" placeholder="Last Name" data-icon="L" id="last_name" name="last_name"></br>
+        	<input type="text" required title="Username required" placeholder="Username" data-icon="U" id="username" name="username">
+        	<input type="Password" required title="Password required" placeholder="Password" data-icon="P" id="passowrd" name="password"></br>
+        	<div class="infobar" style="position: absolute; top: 695px; left: 70px; width: 80px;">+91</div>
+        	<input type="text" style="top: 400px; left: 90px;" required title="Phone Number required" placeholder="Phone Number" data-icon="H" id="phoneno" name="phoneno">
+
+			<input type="file" placeholder="hi" style="top: 0px; left: 0px;" data-icon="DP" id="dpimage" name="dpimage">
+        	<div class="imagebox" style="left: 410px; top: 170px;"><img src="images/userdefault.png" width="190" height="190" style="position: absolute; top: 6px; left: -10px;"></div>
+        	
+   
+
+        	<div class="Date" style="width: 390px;">Date of Birth: </div>
+        	<select name="dob_month" id="dob_month" class="input_pulldown" style="width: 100px position: absolute; top:502px; left:210px;">
+ 				<option value="0">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option>               <option value="4">April</option><option value="5">May</option><option value="6" selected="selected">June</option><option value="7">July</option>    <option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option>        <option value="12">December</option>
+			</select>
+
+			<select name="dob_day" id="dob_day" class="input_pulldown" style="width: 100px position: absolute; top:502px; left:335px;">
+  				<option value="0">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>      <option value="5" selected="selected">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>                <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option>                            <option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option>                            <option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>                            <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option>                            <option value="30">30</option><option value="31">31</option>
+			</select>
+
+			<select name="dob_year" id="dob_year" class="input_pulldown" style="width: 100px position: absolute; top:502px; left:410px;">
+				<option value="0">Year</option><option value="2011">2011</option><option value="2010">2010</option>                             <option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option>            <option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option>            <option value="2001">2001</option><option value="2000">2000</option>
+			</select>
+
+			<div class="Operation" style="top: 610px; left: 85px; width: 290px;">Select Your Rank: </div>
+		<select name="select" id="select" class="input_pulldown" style="position: absolute; top:610px; left:220px;" >
+ 				<option value="0">Select Your Rank</option><option value="1" name="val" id="val">Admin</option><option value="2" name="val" id="val">Operator</option><option value="3" name="val" id="val">User</option>
+		</select>
+
+			<div class="Gender" style="top: 780px;">Gender: </div>
+			<input type="radio" id="radio1" name="radios" value="all" style="width: 100px; position: absolute; top:472px; left:50px;" checked>
+  			 <label for="radio1" style=" position: absolute; top: 795px; left: 170px;">Male</label>
+			<input type="radio" id="radio2" name="radios" value="false" style="width: 100px position: absolute; top:372px; left:50px;">
+  			 <label for="radio2" style=" position: absolute; top: 795px; left: 220px;">Female</label>
+			</div>
+        	<input type="text" required title="Email Name required" style="width: 510px; top: 480px;" placeholder="Your Email" data-icon="E" id="email" name="email"></br>
+        
+			<img src="captcha.php" style=" position: absolute; width: 200px; height: 30px; top: 1020px; left: 130px;">
+			<input type="text" name="captcha" placeholder="Enter the text here" style="position: absolute; top:1000px; left: 350px;">
+			<div class="submit"><input type="submit" style="top: 650px;" name="commit" value="Sign Up"></div>
+ 
+		</form>
+	</section>
+	
+</body>
+
+</html>
