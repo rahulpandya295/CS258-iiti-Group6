@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/Layout0.css"/>
+	<link rel="stylesheet" type="text/css" href="css/Form.css"/>   
+	
+</head>
+
+<body>
+
+	<div class="introBar">
+		<div class="introHead1">SICDOC</div>
+		<div class="introHead2">Sophisticated Instrumentation Lab</div>
+	</div>
+	<section class="formbox">
+		<div class="formtext">NMR Facility Request Form</div>
+		<div class="seperatorS"></div>	
+		<div class="infobar">General Information</div>
+    <div class="seperatorS" style="position: absolute; top: 180px; left: 65px; height: 1px; width: 500px;"></div>
+		
+		<form method="post" action="msrform.php" >
+			<input type="text" required title="Name required" placeholder="Name" data-icon="N" id="name" name="name"></br>
+        	<input type="text" required title="Sample Code required" placeholder="Sample Code" data-icon="S" id="scode" name="scode">
+        	<input type="text" required title="Sample Amount required" placeholder="Sample Amount"  style="position: absolute; top: 280px; left: 465px; width: 250px;" data-icon="A" id="samount" name="samount">
+          <div class="infobar" style="position: absolute; top: 295px; left: 771px; width: 80px;">(mg)</div>
+          <input type="text" required title="Solvent required" placeholder="Solvent"  style="position: absolute; top: 380px; left: 50px; width: 300px;" data-icon="V" id="solvent" name="solvent">
+        	<input type="text" required title="Molecular Formula required" placeholder="Molecular Formula" style="position: absolute; top: 375px; left: 465px; width: 310px;" data-icon="F" id="mformula" name="mformula"></br>
+          <input type="text" required title="Details required" placeholder="Requested Experiment"  style="position: absolute; top: 470px; left: 50px; width: 725px; height: 50px;" data-icon="D" id="details" name="details">
+        	<div class="Date">Date: </div>
+        	<select name="dob_month" id="dob_month" class="input_pulldown" style="width: 100px position: absolute; top:200px; left:645px;">
+ 				<option value="0">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option>               <option value="4">April</option><option value="5">May</option><option value="6" selected="selected">June</option><option value="7">July</option>    <option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option>        <option value="12">December</option>
+			</select>
+
+			<select name="dob_day" id="dob_day" class="input_pulldown" style="width: 100px position: absolute; top:200px; left:575px;">
+  				<option value="0">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>      <option value="5" selected="selected">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>                <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option>                            <option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option>                            <option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>                            <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option>                            <option value="30">30</option><option value="31">31</option>
+			</select>
+
+			<select name="dob_year" id="dob_year" class="input_pulldown" style="width: 100px position: absolute; top:200px; left:770px;">
+				<option value="0">Year</option><option value="2011">2011</option><option value="2010">2010</option>                             <option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option>            <option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option>            <option value="2001">2001</option><option value="2000">2000</option>
+			</select>
+
+		     <div class="seperatorS" style="position: absolute; top: 625px; left: 75px; height: 1px; width: 500px;"></div>
+
+        	<div class="infobar" style="position: absolute; top: 585px; left: 50px;">Molecular Structure</div>
+          <input type="text" 
+          <input type="text" style="position: absolute; top: 650px; left: 40px; width: 850px; height: 350px;" required title="Molecular Structure" data-icon="R" id="mstructure" name="mstructure">         
+ 
+           <div class="note" style="left: 80px;">Note: Users are requested to submit 5-10 mg sample for Proton NMR and 30-40 mg for carbon NMR.</div>
+
+
+
+        	<div class="submit"><input type="submit" name="commit" value="Submit" style="position: absolute; top: 1125px; left: 350px;"></div>
+
+
+		</form>
+	</section>
+	
+</body>
+
+</html>
