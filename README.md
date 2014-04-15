@@ -1,9 +1,10 @@
+```
 CS258-iiti-Group6
 =================
 
-Centralised Software for Sophisticated Instruments Lab
+Centralised Software for `Sophisticated Instruments Lab`.
 
-***
+```
 
 Set up on PC
 =============
@@ -37,10 +38,10 @@ Name of the database will be 'test'. For keeping the credentials of the people, 
 Tasks remaining:
 -----------------
 
-*Add a notification functionality  
-*Profile of users  
-*Change password  
-*dynamic search  
-*Gallery  
+* Add a notification functionality  
+* Profile of users  
+* Change password  
+* dynamic search  
+* Gallery  
 
 
