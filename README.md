@@ -33,5 +33,10 @@ Name of the database will be 'test'. For keeping the credentials of the people, 
 Tasks remaining:
 ================
 
+Add a notification functionality
+Profile of users
+Change password
+dynamic search
+Gallery
 
 
