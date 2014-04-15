@@ -1,11 +1,11 @@
 .Signupbox {
 
-	position: absolute;
-	top: 160px;
-	left: 300px;
+  position: absolute;
+  top: 160px;
+  left: 300px;
     width: 700px;
     padding: 10px;
-    height: 800px;
+    height: 1100px;
     background: white;
     border: #e1e1e1 solid 1px;
     font-family: 'Lato', Arial, sans-serif;
@@ -15,9 +15,9 @@
 
 .Signuptext {
 
-	position: absolute;
-	top: 40px;
-	width: 700px;
+  position: absolute;
+  top: 40px;
+  width: 700px;
   height: 50px;
   padding-top: 10px;
   font-size: 32px;
@@ -30,14 +30,42 @@
   font-family: 'Lato', Arial, sans-serif;
 }
 
+.infobar {
+
+  position: absolute;
+  top: 140px;
+  left: 40px;
+  width: 200px;
+  height: 20px;
+  padding-top: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  padding-top: 10px;
+  text-align: center;
+  background: white;
+  color:#336699;
+  margin-bottom: 0px;
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+.uploadTag {
+    color: #000;
+    color: rgba(0, 0, 0, 0.5);
+    opacity: 0.3; 
+    position: absolute; 
+    top:244px; 
+    left:422px;
+    font-size: 17pt;
+    font-family: 'Lato', Arial, sans-serif;
+}
 .seperatorS {
 
-	position: absolute;
-	top: 125px;
-	left: 30px;
-	background: #e1e1e1;
-	width: 650px;
-	height: 2px;
+  position: absolute;
+  top: 125px;
+  left: 30px;
+  background: #e1e1e1;
+  width: 650px;
+  height: 2px;
 }
 
 input[type=text], input[type=password] {
@@ -72,75 +100,75 @@ input[type=text], input[type=password] {
  }
 
 select {
-	position: absolute;
-	cursor: pointer;
-  	font-size: 14px;
-  	font-weight: 800;
-  	margin-left: 15px;
-  	margin-right: 5px;
-  	margin-bottom: 40px;
-  	margin-top: 10px;
-   	height: 30px;
-  	color: #404040;
-  	background: #f9f9f9;
-  	border: 0px solid;
-  	border-color: #c4c4c4 #d1d1d1 #d4d4d4;
-  	border-radius: 2px;
-  	outline: 1px solid #eff4f7;
-  	-moz-outline-radius: 3px;
-  	@include box-shadow(inset 0 1px 3px rgba(black, .12));
+  position: absolute;
+  cursor: pointer;
+    font-size: 14px;
+    font-weight: 800;
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    height: 30px;
+    color: #404040;
+    background: #f9f9f9;
+    border: 0px solid;
+    border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+    border-radius: 2px;
+    outline: 1px solid #eff4f7;
+    -moz-outline-radius: 3px;
+    @include box-shadow(inset 0 1px 3px rgba(black, .12));
   
-   	&:focus {
+    &:focus {
 
-    	border-color: #7dc9e2;
-    	outline-color: #dceefc;
-    	outline-offset: 0;
-  	}
+      border-color: #7dc9e2;
+      outline-color: #dceefc;
+      outline-offset: 0;
+    }
 }
 
 option {
-	color: #a0a0a0;
+  color: #a0a0a0;
 }
 
 .input_pulldown {
 
-	color: #a0a0a0;
+  color: #a0a0a0;
 }
 
 .Date {
 
-	font-size: 15px;
-  	font-weight: 800;
-	position: absolute;
-	padding: 15px;
-	top: 502px;
-	left: 85px; 
-	width: 500px;
-	height: 20px;
-	color: #a0a0a0;
-  	background: #f9f9f9;	
-  	border: 0px solid;
-  	border-color: #c4c4c4 #d1d1d1 #d4d4d4;
-  	border-radius: 2px;
-  	outline: 1px solid #eff4f7;
+  font-size: 15px;
+    font-weight: 800;
+  position: absolute;
+  padding: 15px;
+  top: 502px;
+  left: 85px; 
+  width: 500px;
+  height: 15px;
+  color: #a0a0a0;
+    background: #f9f9f9;  
+    border: 0px solid;
+    border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+    border-radius: 2px;
+    outline: 1px solid #eff4f7;
 }
 
 .Gender {
 
-	font-size: 15px;
-  	font-weight: 800;
-	position: absolute;
-	padding: 15px;
-	top: 600px;
-	left: 85px; 
-	width: 200px;
-	height: 20px;
-	color: #a0a0a0;
-  	background: #f9f9f9;	
-  	border: 0px solid;
-  	border-color: #c4c4c4 #d1d1d1 #d4d4d4;
-  	border-radius: 2px;
-  	outline: 1px solid #eff4f7;
+  font-size: 15px;
+  font-weight: 800;
+  position: absolute;
+  padding: 15px;
+  top: 610px;
+  left: 85px; 
+  width: 200px;
+  height: 10px;
+  color: #a0a0a0;
+    background: #f9f9f9;  
+    border: 0px solid;
+    border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+    border-radius: 2px;
+    outline: 1px solid #eff4f7;
 }
 
 .Operation {
@@ -152,7 +180,7 @@ option {
   top: 150px;
   left: 65px; 
   width: 300px;
-  height: 20px;
+  height: 15px;
   color: #a0a0a0;
     background: #f9f9f9;  
     border: 0px solid;
@@ -220,11 +248,35 @@ input[type=radio]:checked + label {
 }
 
 label {
-	
+  
   position: relative;
   top: 425px;
   left: 165px;
   padding: 10px;
   font-size: 14px;
-  font-weight: 800;	
+  font-weight: 800; 
 }
+
+
+.clearfix{ *zoom:1;}
+.clearfix:before, .clearfix:after{display:table; line-height:0; content:"";}
+.clearfix:after{clear:both;}
+.outer{ width:630px; height:350px; background:#108b00; margin:0 auto;}
+.outer h1{ padding-top:80px;}
+
+.upload_button_outer{ 
+  height:30px; 
+  padding:3px;
+  margin:0px 20px;
+  background:#fff; 
+  border-radius:25px; 
+  -moz-border-radius:25px; 
+  position: absolute; 
+  top:350px;
+  left:450px;
+}
+
+.filename{ line-height:15px; font-weight:bold; float:left; margin-left:30px; line-height:30px; height:25px; overflow:hidden; width:200px;}
+.uploadbtn{ float:right; position:relative; width:154px; height:42px; border-radius:25px; -moz-border-radius:25px; overflow:hidden;}
+.uploadbtn input[type=file]{ position:relative; z-index:11; font-size:40px; opacity: 0; filter:alpha(opacity=0); cursor:pointer;}
+.uploadbtn .upload{width:194px; height:52px; background:url(upload_button.png) no-repeat left top; position:absolute; left:470px; top:350px; z-index:10;}
