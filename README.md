@@ -29,3 +29,9 @@ Name of the database will be 'test'. For keeping the credentials of the people, 
 11. field(Admin/operator/user)
 12. email
 13. phone no.
+
+Tasks remaining:
+================
+
+
+
