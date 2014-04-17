@@ -18,7 +18,7 @@ Set up connection variable according to your database in connection.php.
 Handling DATABASE
 ==================
 
-Name of the database will be 'test'. For keeping the credentials of the people, i'm using the table 'memebers'. This table will have...
+Name of the database will be 'test'. For keeping the credentials of the people, i'm using the table 'memebers'. This table will have...  
 1. Serial no.  
 2. First Name  
 3. Last Name  
