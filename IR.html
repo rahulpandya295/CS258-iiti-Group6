@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	
+</head>
+
+<body>
+
+	<div class="introBar">
+		<div class="introHead1">SICDOC</div>
+		<div class="introHead2">Sophisticated Instrumentation Lab</div>
+	</div>
+	<section class="formbox">
+		<div class="formtext">IR form</div>
+		<div class="seperatorS"></div>	
+		<div class="infobar">General Information</div>
+    <div class="seperatorS" style="position: absolute; top: 180px; left: 65px; height: 1px; width: 500px;"></div>
+		
+		<form method="post" action="IR.php" >
+			
+        	<input type="text" required title="Sample Code required" placeholder="Sample Code" data-icon="S" id="scode" name="scode">
+        	
+        	<input type="text" required title="Research Group required" placeholder="Research Group" style="position: absolute; top: 375px; left: 610px; width: 210px;" data-icon="S" id="rgroup" name="rgroup"></br>
+        	
+			
+			
+			
+			<div class="infobar" style="position: absolute; top: 475px; left: 50px;">Sample Information</div>
+
+			<input type="text" required title="Solubility" placeholder="Solubility" data-icon="S" id="solubility" style="position: absolute; top: 615px; left: 50px; width: 470px;" name="solubility">
+        	<div class="infobar" style="position: absolute; top: 645px; left: 580px; width: 80px;">(Specify solvent)</div>	
+			</br>
+			<input type="text" required title="Hazards" placeholder="Hazards" data-icon="H" id="hazard" style="position: absolute; top: 635px; left: 50px; width: 470px;" name="hazard">
+        	<div class="infobar" style="position: absolute; top: 645px; left: 580px; width: 80px;">(if any)</div>	
+        	</br>
+
+			<input type="text" required title="Calibration Concentration" placeholder="Concentration" data-icon="C" id="Calcon" style="position: absolute; top: 685px; left: 50px; width: 370px;" name="calcon">
+			<input type="text" required title="Excitation wavelength" placeholder="Excitation wavelength" data-icon="E" id="ewave" style="position: absolute; top: 705px; left: 50px; width: 370px;" name="ewave">
+        	<div class="infobar" style="position: absolute; top: 705px; left: 750px; width: 80px;">um</div>
+			<input type="text" required title="Molecular Formula required" placeholder="Molecular Formula" data-icon="M" id="mformula" style="position: absolute; top: 725px; left: 50px; width: 370px;" name="mformula">
+        	<input type="text" required title="Molecular Weight required" placeholder="Molecular Weight" data-icon="W" id="mweight" style="position: absolute; top: 745px; left: 520px; width: 170px;" name="mweight">	
+        	<div class="infobar" style="position: absolute; top: 735px; left: 750px; width: 80px;">Daltons</div>
+			<input type="text" required title="Range of Scan" placeholder="Range of Scan" data-icon="R" id="rangeScan" style="position: absolute; top: 765px; left: 50px; width: 370px;" name="rangeScan">
+			
+			<div class="infobar" style="position: absolute; top: 475px; left: 50px;">Special Requests</div>
+			<textarea name="request" rows='10' cols="30" placeholder="if any">
+			</textarea>
+			
+			
+
+          <div class="seperatorS" style="position: absolute; top: 865px; left: 85px; height: 1px; width: 500px;"></div>
+
+        	<div class="infobar" style="position: absolute; top: 825px; left: 50px;">Request Analysis</div>
+        	
+			
+			
+
+
+
+			<div class="seperatorS" style="position: absolute; top: 515px; left: 75px; height: 1px; width: 500px;"></div>
+
+			<div class="Gender">Request Analysis : </div>
+			<input type="checkbox" id="checkbox1" name="checkbox1" value="all">
+  			 <label for="checkbox1">Solid (KBr Pallate)</label>
+			<input type="checkbox" id="checkbox2" name="checkbox2" value="all" >
+  			 <label for="checkbox2">Liquid (liquid cells)</label>
+  			 <input type="checkbox" id="checkbox3" name="checkbox3" value="all" >
+  			 <label for="checkbox3">ATR</label>
+  			 
+
+
+         			<div class="infobar" style="position: absolute; top: 975px; left: 50px;">These samples do not contain Radioactivity</div>
+
+				<div class="submit"><input type="submit" name="commit" value="Submit" style="position: absolute; top: 1115px; left: 350px;"></div>
+
+
+    		</div>
+		</form>
+	</section>
+	
+</body>
+
+</html>
