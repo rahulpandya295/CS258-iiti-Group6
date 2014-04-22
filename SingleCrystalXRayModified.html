@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/Layout0.css"/>
+	<link rel="stylesheet" type="text/css" href="css/Form.css"/>   
+	
+</head>
+
+<body>
+
+	<div class="introBar">
+		<div class="introHead1">SICDOC</div>
+		<div class="introHead2">Sophisticated Instrumentation Lab</div>
+	</div>
+	<section class="formbox" style="height: 1550px;">
+		<div class="formtext" style="left:-25px;">Single Crystal X-Ray Diffraction Facility Request Form</div>
+		<div class="seperatorS"></div>	
+     <div class="note" style="top: 120px; left: 65px;">Instrument: Dual Source Super Nova CCD System from Agilent Technologies (Oxford Diffraction)</div>
+
+		<div class="infobar">General Information</div>
+    <div class="seperatorS" style="position: absolute; top: 180px; left: 65px; height: 1px; width: 500px;"></div>
+		
+		<form method="post" action="msrform.php" >
+			<input type="text" required title="User Name required" placeholder="User Name" data-icon="N" id="uname" name="uname"></br>
+        	<input type="text" required title="Supervisor required" placeholder="Supervisor Name" data-icon="S" id="sname" name="sname">
+        	<input type="text" required title="Phone No. required" placeholder="Phone Number"  style="position: absolute; top: 280px; left: 465px; width: 250px;" data-icon="P" id="phone_no" name="phone_no">
+        	<input type="text" required title="User Code required" placeholder="User Code" style="position: absolute; top: 375px; left: 610px; width: 210px;" data-icon="U" id="user_code" name="user_code"></br>
+        	<div class="Date">Date: </div>
+        	<select name="dob_month" id="dob_month" class="input_pulldown" style="width: 100px position: absolute; top:200px; left:645px;">
+ 				<option value="0">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option>               <option value="4">April</option><option value="5">May</option><option value="6" selected="selected">June</option><option value="7">July</option>    <option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option>        <option value="12">December</option>
+			</select>
+
+			<select name="dob_day" id="dob_day" class="input_pulldown" style="width: 100px position: absolute; top:200px; left:575px;">
+  				<option value="0">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>      <option value="5" selected="selected">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>                <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option>                            <option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option>                            <option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>                            <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option>                            <option value="30">30</option><option value="31">31</option>
+			</select>
+
+			<select name="dob_year" id="dob_year" class="input_pulldown" style="width: 100px position: absolute; top:200px; left:770px;">
+				<option value="0">Year</option><option value="2011">2011</option><option value="2010">2010</option>                             <option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option>            <option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option>            <option value="2001">2001</option><option value="2000">2000</option>
+			</select>
+
+			<div class="Gender">Stablity: </div>
+			<input type="checkbox" id="checkbox1" name="checkbox1" value="all">
+  			 <label for="checkbox1">Stable</label>
+			<input type="checkbox" id="checkbox2" name="checkbox2" value="all" >
+  			 <label for="checkbox2">Air Sensetive</label>
+  			 <input type="checkbox" id="checkbox3" name="checkbox3" value="all" >
+  			 <label for="checkbox3">Moisure Sensetive</label>
+  			
+        <div class="Gender" style="top: 645px; width: 320px;">Other* : </div>
+      <input type="checkbox" id="checkbox4" name="checkbox4" value="all">
+         <label for="checkbox4" style="top: 440px;">IR</label>
+      <input type="checkbox" id="checkbox5" name="checkbox5" value="all" >
+         <label for="checkbox5" style="top: 440px;">NMR</label>
+         <input type="checkbox" id="checkbox6" name="checkbox6" value="all" >
+         <label for="checkbox6" style="top: 440px;">Mass Spectrum</label>
+        	<input type="text" required title="Email Name required" style="position: absolute; top: 375px; left: 50px; width: 470px;" placeholder="Your Email" data-icon="E" id="email" name="email"></br>
+          <div class="note" style="top: 700px; left: 90px;">(*) other techniques used for characterisatioan.</div>
+
+          <div class="seperatorS" style="position: absolute; top: 515px; left: 75px; height: 1px; width: 500px;"></div>
+
+        	<div class="infobar" style="position: absolute; top: 475px; left: 50px;">Crystal Information</div>
+
+        	<input type="text" required title="Color" placeholder="Color" data-icon="C" id="color" style="position: absolute; top: 635px; left: 520px; width: 270px;" name="color">
+        	</br>
+        	<input type="text" required title="Melting Point required" placeholder="Melting Point" data-icon="M" id="mpoint" style="position: absolute; top: 725px; left: 50px; width: 170px;" name="mpoint">
+          <div class="infobar" style="position: absolute; top: 740px; left: 275px; width: 80px;">&#176C</div>
+        	
+          <input type="text" required title="Information required" placeholder="Starting material and Solvent Information" data-icon="I" id="info" style="position: absolute; top: 815px; left: 50px; width: 750px; " name="info">
+
+          <div class="infobar" style="top: 910px; width: 400px;">Structural Formula and Expected Structure</div>
+          <div class="seperatorS" style="position: absolute; top: 950px; left: 65px; height: 1px; width: 500px;"></div>
+          <div class="note" style="top: 955px; left: 75px;">(*) (or as close to expected as possible. Indicate the desired atom-labeling scheme as well)</div>
+
+          <input type="text" required title="Structural Formula and Expected Structure" placeholder="" data-icon="D" id="daigram" style="position: absolute; top: 985px; left: 45px; width: 755px; height: 150px;" name="diagram">
+
+          <div class="infobar" style="top: 1190px; ">Official Details</div>
+          <div class="seperatorS" style="position: absolute; top: 1230px; left: 65px; height: 1px; width: 500px;"></div>
+
+          <input type="text" required title="SIC Code required" placeholder="SIC Code" style="position: absolute; top: 1255px; left: 50px; width: 210px;" data-icon="O" id="sic_code" name="sic_code"></br>
+
+          <div class="Date" style="top: 1265px; left: 400px;">Date* : </div>
+           <div class="note" style="top: 1320px; left: 410px;">(*) of submission.</div>
+          <select name="dob_month" id="dob_month" class="input_pulldown" style="width: 100px position: absolute; top:1265px; left:550px;">
+        <option value="0">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option>               <option value="4">April</option><option value="5">May</option><option value="6" selected="selected">June</option><option value="7">July</option>    <option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option>        <option value="12">December</option>
+      </select>
+
+      <select name="dob_day" id="dob_day" class="input_pulldown" style="width: 100px position: absolute; top:1265px; left:480px;">
+          <option value="0">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>      <option value="5" selected="selected">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>                <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option>                            <option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option>                            <option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>                            <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option>                            <option value="30">30</option><option value="31">31</option>
+      </select>
+
+      <select name="dob_year" id="dob_year" class="input_pulldown" style="width: 100px position: absolute; top:1265px; left:670px;">
+        <option value="0">Year</option><option value="2011">2011</option><option value="2010">2010</option>                             <option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option>            <option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option>            <option value="2001">2001</option><option value="2000">2000</option>
+      </select>
+
+           <div class="note" style=" top: 1355px; left: 75px;">Use of Single Crystal X-Ray Diffraction Facility at IIT Indore automatically implies that following acknowledgement will be given by the user whenever either oral or written presentations are made of the results obtained from the facility:<br>Single Crystal X-Ray Diffraction Facility IIT "We are grateful to the Sophisticated Instrument Centre (SIC) Indore."<br>Further, the user must ensure to send us copies of reprints of publications which contain results obtained from above facility. </div>
+
+
+
+        	<div class="submit"><input type="submit" name="commit" value="Submit" style="position: absolute; top: 1500px; left: 350px;"></div>
+
+
+    		</div>
+		</form>
+	</section>
+	
+</body>
+
+</html>

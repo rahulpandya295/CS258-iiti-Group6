@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/search3.css"/>
+	<link rel="stylesheet" type="text/css" href="css/Admin.css"/>
+	<link rel="stylesheet" type="text/css" href="css/search1.css" />
+	<link rel="stylesheet" type="text/css" href="css/search2.css" />
+	<script src="js/modernizr.custom.js"></script>
+	
+</head>
+
+<body>
+
+	<div class="introBar">
+		<div class="introHead1">SICDOC</div>
+		<div class="introHead2"> Sophisticated Instrumentation Lab </div>
+
+		<div class="column">
+					<div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"></span>
+						</form>
+					</div>
+			</div>
+
+		<script src="js/classie.js"></script>
+		<script src="js/uisearch.js"></script>
+		<script>
+			new UISearch( document.getElementById( 'sb-search' ) );
+		</script>
+
+	</div>
+	<iframe src="Startexpt.html" style="position: absolute; top: 70px; left: 0px; width: 1090px; height: 500px; overflow: hidden;" scrolling="no"; seamless="yes";>
+ 
+	</iframe>
+	
+	<section class="sidebar">
+		<div class="imagebox"><img src="images/userdefault.png" width="190" height="190" style="position: absolute; top: 6px; left: -10px;"></div>
+		<div class="seperatorA" style="position: absolute;  top: 230px;  left: 12px;"></div>
+		<div class="sidebartext" style=" position: absolute;  top: 231px;  left: 40px; text-align: center; padding-left: 0px; width: 140px;">User</div>
+		<div class="seperatorA" style="position: absolute;  top: 270px;  left: 12px;"></div>
+		<img src="images/notification.png" width="15" height="15" style="position: absolute; top: 305px; left: 25px;">
+		<div class="sidebartext" style=" position: absolute;  top: 291px;  left: 40px;">Notifications</div>
+		<div class="seperatorA" style="position: absolute;  top: 332px;  left: 12px;"></div>
+		<img src="images/sexperiment.png" width="15" height="15" style="position: absolute; top: 350px; left: 24px;">
+		<div class="sidebartext" style="position: absolute;  top: 335px;  left: 40px;">Submit Form</div>
+
+
+	</section>
+	<button class="logout">Logout</button>
+</body>
+
+</html>
