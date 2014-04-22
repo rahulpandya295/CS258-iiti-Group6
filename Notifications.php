@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 						<html>
 
@@ -14,7 +17,7 @@
 								<div class="notifytext">
 									<ul>	
 				<?php
-				$user_id=12;
+				$user_id=$_SESSION['usr'];
 				include "access_db.inc.php";
 				$q = mysql_query("SELECT user_id,form_id,viewed,form_no,time from notifications where user_id='$user_id' order by time desc");
 				$n = mysql_num_rows($q);
@@ -31,12 +34,9 @@
 						$form_array=mysql_fetch_array($form_result);
 							echo "<li>".$row['time']." | ".$form_array['details']."</li>"."<hr>";
 							$i++;
-
 						}
-						
 					}
-					
-						
+
 				}
 					echo '<meta http-equiv="refresh" content="10000">';
 				?>
