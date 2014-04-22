@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/Layout0.css"/>
+	<link rel="stylesheet" type="text/css" href="css/Form.css"/>   
+	
+</head>
+
+<body>
+
+	<div class="introBar">
+		<div class="introHead1">SICDOC</div>
+		<div class="introHead2">Sophisticated Instrumentation Lab</div>
+	</div>
+	<section class="formbox">
+		<div class="formtext">Mass Spectrometry Request Form</div>
+		<div class="seperatorS"></div>	
+		<div class="infobar">General Information</div>
+    <div class="seperatorS" style="position: absolute; top: 180px; left: 65px; height: 1px; width: 500px;"></div>
+		
+		<form method="post" action="msrff.php" >
+        	<input type="text" required title="Sample Code required" placeholder="Sample Code" data-icon="S" id="scode" name="scode">
+        	<input type="text" required title="Phone No. required" placeholder="Phone Number"  style="position: absolute; top: 280px; left: 465px; width: 250px;" data-icon="P" id="phone_no" name="phone_no">
+        	<input type="text" required title="Research Group required" placeholder="Research Group" style="position: absolute; top: 375px; left: 610px; width: 210px;" data-icon="S" id="rgroup" name="rgroup"></br>
+        	
+
+			<div class="Gender">Solubility: </div>
+			<input type="checkbox" id="checkbox1" name="checkbox1" value="all">
+  			 <label for="checkbox1">CH<sub>3</sub>CN</label>
+			<input type="checkbox" id="checkbox2" name="checkbox2" value="all" >
+  			 <label for="checkbox2">MeOH<sub></sub></label>
+  		<input type="checkbox" id="checkbox3" name="checkbox3" value="all" >
+  			 <label for="checkbox3">CHCl<sub>3</sub></label>
+  		<input type="checkbox" id="checkbox4" name="checkbox4" value="all" >
+  			 <label for="checkbox4">IPA<sub></sub></label>
+  		<input type="checkbox" id="checkbox5" name="checkbox5" value="all" >
+  			 <label for="checkbox5">H<sub>2</sub>O</label>
+  			<div class="infobar" style="position: absolute; top: 550px; left: 530px; width: 350px;">(For mixtures of solvent tick on both)</div>
+
+
+          <div class="seperatorS" style="position: absolute; top: 515px; left: 75px; height: 1px; width: 500px;"></div>
+
+        	<div class="infobar" style="position: absolute; top: 475px; left: 50px;">Sample Information</div>
+
+        	<input type="text" required title="Hazards" placeholder="Hazards" data-icon="H" id="hazard" style="position: absolute; top: 635px; left: 50px; width: 470px;" name="hazard">
+        	<div class="infobar" style="position: absolute; top: 645px; left: 580px; width: 80px;">(if any)</div>	
+        	</br>
+
+        	<input type="text" required title="Molecular Formula required" placeholder="Molecular Formula" data-icon="M" id="mformula" style="position: absolute; top: 725px; left: 50px; width: 370px;" name="mformula">
+        	<input type="text" required title="Molecular Weight required" placeholder="Molecular Weight" data-icon="W" id="mweight" style="position: absolute; top: 725px; left: 520px; width: 170px;" name="mweight">	
+        	<div class="infobar" style="position: absolute; top: 735px; left: 750px; width: 80px;">Daltons</div>
+
+          <div class="seperatorS" style="position: absolute; top: 865px; left: 85px; height: 1px; width: 500px;"></div>
+
+        	<div class="infobar" style="position: absolute; top: 825px; left: 50px;">Request Analysis</div>
+        	
+        	<div class="Gender" style="position: absolute; top: 895px; left: 90px; width: 340px;">ESI-MS: </div>
+			     <input type="radio" id="radio1" name="radios1" value="1" checked>
+  			   <label for="radio1" style="position: absolute; top: 907px; left: 200px;">Positive Mode</label>
+			     <input type="radio" id="radio2" name="radios1" value="2">
+  			   <label for="radio2" style="position: absolute; top: 907px; left: 320px;">Negetive Mode</label>
+           
+           <div class="Gender" style="position: absolute; top: 975px; left: 90px; width: 340px;">HRMS: </div>
+           <input type="radio" id="radio3" name="radios2" value="1" checked>
+           <label for="radio3" style="position: absolute; top: 987px; left: 200px;">Positive Mode</label>
+           <input type="radio" id="radio4" name="radios2" value="2">
+           <label for="radio4" style="position: absolute; top: 987px; left: 320px;">Negetive Mode</label>
+
+ 
+           <div class="note">Note: These samples do not contain radioactivity.</div>
+
+
+
+        	<div class="submit"><input type="submit" name="commit" value="Submit" style="position: absolute; top: 1115px; left: 350px;"></div>
+
+
+    		</div>
+		</form>
+	</section>
+	
+</body>
+
+</html>
