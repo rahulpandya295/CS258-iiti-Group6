@@ -8,6 +8,7 @@ require_once 'myPassword.php';
 //$http_proxy = 'cse1200125:'.$var.'@webproxy.indore.iiti.ac.in:8080';
 
 session_start();
+
 	if(!isset($_SESSION['sendmail'])){
 		session_destroy();
 		header("location: Login_form.php");
@@ -31,7 +32,6 @@ $smtpServer = strtolower(substr($opEmail,strpos($opEmail,'@')+1));
 
 $mail->SMTPDebug  = 2;
 $mail->SMTPAuth = true;                             
-
 
 if($smtpServer == "gmail.com"){
 		$mail->Host = "smtp.gmail.com";	
@@ -87,7 +87,7 @@ if(isset($_FILES['file']['name'])){
 			//if there is any error msg then show it and revert back to the home page of the Operator else attach the attachment with the object of the mailer
 			if(!empty($alert_msg)){
 				echo "<script type='text/javascript'>alert('$alert_msg')</script>";
-				//header("location: Operator.php");
+				header("location: Operator.php");
 				die();
 			}
 			else{
@@ -122,7 +122,7 @@ $mail->isHTML(TRUE);
 if(!$mail->send()) {
    $alert_msg = 'Message could not be sent.' . '\n\n';
    $alert_msg.= 'Mailer Error: ' . $mail->ErrorInfo;
-   $_SESSION['errorSending']=$alert_msg;
+   $_SESSION['errorSending']=$alert_msg . " hi ";
    if(isset($_SESSION['pw'])){			
    		header("location: forgotPsWord.html");
    	}else{
@@ -138,4 +138,5 @@ if(!$mail->send()) {
 		}	
 }
 die();
+
 ?>

@@ -33,15 +33,5 @@
 							$i++;
 
 						}
-						
 					}
-					
-						
 				}
-					echo '<meta http-equiv="refresh" content="10000">';
-				?>
-</ul>
-								</div>
-							</section>
-						</body>
-						</html>

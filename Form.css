@@ -239,7 +239,7 @@ input[type=checkbox]:checked + label {
 }
 
 label {
-	
+
   position: relative;
   top: 370px;
   left: 185px;

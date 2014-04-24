@@ -13,10 +13,8 @@ $query = "UPDATE members SET `password` = '" . $psWord . "' WHERE  `members`.`us
 	
 	if(mysql_query($query)){
 		$_SESSION['pwReset']=1;
-		echo "no!";
 	}else{
 		$_SESSION['noUserFound']=1;
-		echo "yes";
 	}
 	
 	header("location: Login_form.php");
