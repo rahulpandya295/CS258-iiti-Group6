@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/Layout0.css"/>
+	<link rel="stylesheet" type="text/css" href="css/Form.css"/>   
+	
+</head>
+
+<body>
+
+	<div class="introBar">
+		<div class="introHead1">SICDOC</div>
+		<div class="introHead2" style="left:1200px;">Sophisticated Instrumentation Lab</div>
+	</div>
+	<section class="formbox" style="height: 1550px;">
+		<div class="formtext" style="left:-25px;">Atomic Force Microscopy Request Form</div>
+		<div class="seperatorS"></div>	
+     <div class="note" style="top: 120px; left: 65px;">Instrument: Advance Integrated Scanning Tools for Nano-Technology (AIST-NT)</div>
+
+		<div class="infobar">General Information</div>
+    <div class="seperatorS" style="position: absolute; top: 180px; left: 65px; height: 1px; width: 500px;"></div>
+		
+		<form method="post" action="msrform.php" >
+		<input type="text" style="top: 190px; left: 45px;" title="Name required" placeholder="Name" data-icon="N" id="name" name="name"></br>
+          <input type="text" style="top: 225px; left: 45px;" required title="Supervisor Name required" placeholder="Supervisor Name" data-icon="S" id="scode" name="scode">
+        	<input type="text" required title="Phone No. required" placeholder="Phone Number"  style="position: absolute; top: 280px; left: 465px; width: 250px;" data-icon="P" id="phone_no" name="phone_no">
+        	<input type="text" required title="User Code required" placeholder="User Code" style="position: absolute; top: 375px; left: 610px; width: 210px;" data-icon="U" id="user_code" name="user_code"></br>
+        	<div class="Date">Date: </div>
+        	<select name="dob_month" id="dob_month" class="input_pulldown" style="width: 100px position: absolute; top:200px; left:645px;">
+ 				<option value="0">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option>               <option value="4">April</option><option value="5">May</option><option value="6" selected="selected">June</option><option value="7">July</option>    <option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option>        <option value="12">December</option>
+			</select>
+
+			<select name="dob_day" id="dob_day" class="input_pulldown" style="width: 100px position: absolute; top:200px; left:575px;">
+  				<option value="0">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>      <option value="5" selected="selected">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>                <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option>                            <option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option>                            <option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>                            <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option>                            <option value="30">30</option><option value="31">31</option>
+			</select>
+
+			<select name="dob_year" id="dob_year" class="input_pulldown" style="width: 100px position: absolute; top:200px; left:770px;">
+				<option value="0">Year</option><option value="2011">2011</option><option value="2010">2010</option>                             <option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option>            <option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option>            <option value="2001">2001</option><option value="2000">2000</option>
+			</select>
+
+      <input type="text" required title="Sample Type" placeholder="Sample Type" data-icon="C" id="color" style="position: absolute; top: 545px; left: 50px; width: 270px;" name="color">
+
+      <input type="text" required title="Substrate" placeholder="Substrate" data-icon="C" id="color" style="position: absolute; top: 545px; left: 450px; width: 270px;" name="color">
+
+      <input type="text" required title="Mode of Scanning" placeholder="Mode of Scanning" data-icon="C" id="color" style="position: absolute; top: 645px; left: 50px; width: 270px;" name="color">
+
+      <input type="text" required title="Electrical Properties" placeholder="Electrical Properties" data-icon="C" id="color" style="position: absolute; top: 740px; left: 50px; width: 270px;" name="color">
+
+      <input type="text" required title="Magnetic Properties" placeholder="Magnetic Properties" data-icon="C" id="color" style="position: absolute; top: 740px; left: 450px; width: 270px;" name="color">
+
+        <div class="seperatorS" style="position: absolute; top: 515px; left: 75px; height: 1px; width: 500px;"></div>
+
+        	<div class="infobar" style="position: absolute; top: 475px; left: 50px;">Crystal Information</div>
+
+        <input type="text" required title="Email Name required" style="position: absolute; top: 375px; left: 50px; width: 470px;" placeholder="Your Email" data-icon="E" id="email" name="email"></br>
+
+          <div class="Date" style="position: absolute; top: 835px; left: 60px;">Scan Extents:</div>
+          <input type="text" required title="X-axis" placeholder="X-axis" data-icon="I" id="info" style="position: absolute; top: 840px; left: 160px; width: 45px; height: 20px; z-index: 1;" name="info">
+          <input type="text" required title="Y-axis" placeholder="Y-axis" data-icon="I" id="info" style="position: absolute; top: 840px; left: 242px; width: 45px; height: 20px; z-index: 1;" name="info">
+          <input type="text" required title="Z-axis" placeholder="Z-axis" data-icon="I" id="info" style="position: absolute; top: 840px; left: 330px; width: 45px; height: 20px; z-index: 1;" name="info">
+
+          <div class="infobar" style="top: 920px; left:55px; width: 400px;">Short description of expected Image Topography</div>
+          <div class="seperatorS" style="position: absolute; top: 960px; left: 65px; height: 1px; width: 500px;"></div>
+
+          <input type="text" required title="Structural Formula and Expected Structure" placeholder="" data-icon="D" id="daigram" style="position: absolute; top: 985px; left: 45px; width: 755px; height: 150px;" name="diagram">
+
+          <div class="infobar" style="top: 1190px; ">Official Details</div>
+          <div class="seperatorS" style="position: absolute; top: 1230px; left: 65px; height: 1px; width: 500px;"></div>
+
+          <input type="text" required title="SIC Code required" placeholder="SIC Code" style="position: absolute; top: 1255px; left: 50px; width: 210px;" data-icon="O" id="sic_code" name="sic_code"></br>
+
+          <div class="Date" style="top: 1265px; left: 400px;">Date* : </div>
+           <div class="note" style="top: 1320px; left: 410px;">(*) of submission.</div>
+          <select name="dob_month" id="dob_month" class="input_pulldown" style="width: 100px position: absolute; top:1265px; left:550px;">
+        <option value="0">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option>               <option value="4">April</option><option value="5">May</option><option value="6" selected="selected">June</option><option value="7">July</option>    <option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option>        <option value="12">December</option>
+      </select>
+
+      <select name="dob_day" id="dob_day" class="input_pulldown" style="width: 100px position: absolute; top:1265px; left:480px;">
+          <option value="0">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>      <option value="5" selected="selected">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>                <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option>                            <option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option>                            <option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>                            <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option>                            <option value="30">30</option><option value="31">31</option>
+      </select>
+
+      <select name="dob_year" id="dob_year" class="input_pulldown" style="width: 100px position: absolute; top:1265px; left:670px;">
+        <option value="0">Year</option><option value="2011">2011</option><option value="2010">2010</option>                             <option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option>            <option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option>            <option value="2001">2001</option><option value="2000">2000</option>
+      </select>
+
+           <div class="note" style=" top: 1355px; left: 75px;">Use of Single Crystal X-Ray Diffraction Facility at IIT Indore automatically implies that following acknowledgement will be given by the user whenever either oral or written presentations are made of the results obtained from the facility:<br>Single Crystal X-Ray Diffraction Facility IIT "We are grateful to the Sophisticated Instrument Centre (SIC) Indore."<br>Further, the user must ensure to send us copies of reprints of publications which contain results obtained from above facility. </div>
+
+
+
+        	<div class="submit"><input type="submit" name="commit" value="Submit" style="position: absolute; top: 1500px; left: 350px;"></div>
+
+
+    		</div>
+		</form>
+	</section>
+	
+</body>
+
+</html>
