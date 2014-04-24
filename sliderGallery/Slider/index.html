@@ -1,0 +1,65 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html lang="en">
+<head>
+    <title>SIC Slider</title>
+
+    <link rel="stylesheet" type="text/css" href="/php_test/cse%20project/css/Layout0.css"/>
+    <link rel="stylesheet" type="text/css" href="/php_test/cse%20project/css/Admin.css"/>
+    <link rel="stylesheet" type="text/css" href="/php_test/cse%20project/css/iframe.css"/>
+    <link rel="stylesheet" type="text/css" href="/php_test/cse%20project/css/search1.css" />
+    <link rel="stylesheet" type="text/css" href="/php_test/cse%20project/css/search2.css" />
+    <link rel="stylesheet" type="text/css" href="/php_test/cse%20project/css/Search.css" />
+    <link rel="stylesheet" href="../themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../themes/light/light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../themes/dark/dark.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../themes/bar/bar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+</head>
+<body>
+
+    <div class="introBar">
+        <div class="introHead1">SICDOC</div>
+        <div class="introHead2"><a href="http://iiti.ac.in/SIC/" style="text-decoration: none; color: #FFF; font-family: Arial;">Sophisticated Instrumentation Lab</a></div>
+
+        <div class="column">
+                    <div id="sb-search" class="sb-search">
+                        <form method="POST" action="Search.php">
+                            <input class="sb-search-input" placeholder="Enter your search query" type="text" value="" name="search" id="search">
+                            <input class="sb-search-submit" type="submit" value="">
+                            <span class="sb-icon-search"></span>
+                        </form>
+                    </div>
+            </div>
+
+        <script src="js/classie.js"></script>
+        <script src="js/uisearch.js"></script>
+        <script>
+            new UISearch( document.getElementById( 'sb-search' ) );
+        </script>
+        
+    </div>
+
+    <button class="submit" onClick="javascript:window.location.href ='../../Login_form.php'" style="position: fixed; width:150px; height:50px; top: 120px; font-size: 18px; font-weight: normal; color: #fff; text-shadow: 0 1px #e3f1f1; background: #00cc66; border: 1px solid; border-color: #b4ccce #b3c0c8 #9eb9c2;">Back to Home</button>
+    
+    <div id="wrapper" style="position: absolute; top:20px; left:240px; width: 800px; height: 700px;">
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="sliderImages/NMR_1.jpg" data-thumb="sliderImages/NMR_1.jpg" alt="" title="NMR"/>
+                <img src="sliderImages/TCSPC.jpg" data-thumb="sliderImages/TCSPC.jpg" alt="" title="TCSPC, Horiba" /></a>
+                <img src="sliderImages/FTIR.jpg" data-thumb="sliderImages/FTIR.jpg" alt="" title="Fourier Transform Infrared Spectrometer (FT-IR), Tensor 27, BRUKER"/>
+                <img src="sliderImages/polarimeter.jpg" data-thumb="sliderImages/polarimeter.jpg" alt="" title="Polarimeter" />
+                <img src="sliderImages/q.jpg" data-thumb="sliderImages/q.jpg" alt="" title="SIC facility" />
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="../jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+</body>
+</html>

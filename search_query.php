@@ -1,15 +1,15 @@
 <?php
 
 include 'connection.php';
-
-$q = $_POST['queryString'];
+/*
+$q = $_POST['search'];
 $q = mysql_real_escape_string($q);
 $q = htmlentities($q); 
 
 if($q != ""){
-
+/*
 $query_str = "SELECT CONCAT_WS(' ',`First Name`,`Last Name`) AS FullName FROM `members` WHERE (`username` LIKE '%".$q."%' OR `email` LIKE '%".$q."%' OR `phone_no` LIKE '%".$q."%' OR `First Name` LIKE '%".$q."%' OR `Last Name` LIKE '%".$q."%')";
-
+/*
 $result = mysql_query($query_str);
 
 if(mysql_num_rows($result) == 0){
@@ -22,4 +22,7 @@ if(mysql_num_rows($result) == 0){
 		echo "</select>";
 	}
 }
+
+}
+*/
 ?>
