@@ -51,10 +51,10 @@
 </head>
 
 <body>
-
+<!--
 	<div class="introBar">
 		<div class="introHead1">SICDOC</div>
-		<div class="introHead2"><a href="http://iiti.ac.in/sic/"><font color="#fff">Sophisticated Instrumentation Lab</font></a></div>
+		<div class="introHead2"><a href="http://iiti.ac.in/sic/"><font color="#FFFFFF">Sophisticated Instrumentation Lab</font></a></div>
 	</div>
 	<section class="loginbox">
 		<div class="logintext">Log In</div>
@@ -67,17 +67,37 @@
       		
       		<button class="f_password" type="button" onclick="window.location.href = 'signUp.php'">Sign Up</button>
 			
-			<!--
+			
 			<section class="flat">
             	<button type="button" onclick="window.location.href = 'signUp.html'" style="position: relative; top: 140px; left: 45px;">Sign Up</button>
         	</section>
-        	-->
 		
 		</form>
 	</section>
 	<div class="login-help">
    		<a style="text-decoration: none" href="forgotPsWord.html">Forgot your password?</a>
    	</div>
+
+-->
+	<div class="introBar" style="background-color: #34495e;">
+		<div class="introHead1">SICDOC</div>
+		<div class="introHead2" style="left: 1200px;"><a href="http://iiti.ac.in/SIC/" style="text-decoration: none; color: #FFF;">Sophisticated Instrumentation Lab</a></div>
+	</div>
+	
+	<section class="loginbox" style="position: fixed; height: 250px; width: 600px">
+		<div class="logintext" style="position: absolute; top: 1px;">LOGIN</div>
+		<form method="post" action="login.php" >
+			<input style=" position: absolute; top: 95px; left: 40px;" type="text" required title="Username required" placeholder="Username" data-icon="U" id="uname" name="uname">
+       		<input style=" position: absolute; top: 95px; left: 310px;" type="password" required title="Password required" placeholder="**********" data-icon="x" id="pword" name="pword">	
+       		<div class="submit" style=" position: absolute; top: 137px; left: 140px;"><input type="submit" name="commit" value="Login"></div>
+       		<div class="seperator" style="position: absolute; top: 170px; left: 55px; width: 510px;"></div>
+      		
+		</form>
+	</section>
+	<div class="login-help" style="position: fixed; top: 435px; left: 780px;">
+   		<a style="text-decoration: none; color: #2c3e50" href="forgotPsWord.html"><strong>Forgot your password?</strong></a>
+   	</div>
+
 </body>
 
 </html>

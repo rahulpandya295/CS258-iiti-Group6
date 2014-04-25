@@ -19,28 +19,19 @@
 <body>
 
     <div class="introBar">
-        <div class="introHead1">SICDOC</div>
-        <div class="introHead2"><a href="http://iiti.ac.in/SIC/" style="text-decoration: none; color: #FFF; font-family: Arial;">Sophisticated Instrumentation Lab</a></div>
-
-        <div class="column">
-                    <div id="sb-search" class="sb-search">
-                        <form method="POST" action="Search.php">
-                            <input class="sb-search-input" placeholder="Enter your search query" type="text" value="" name="search" id="search">
-                            <input class="sb-search-submit" type="submit" value="">
-                            <span class="sb-icon-search"></span>
-                        </form>
-                    </div>
+        <div class="introHead1"><a href="../../Login_form.php" style="text-decoration: none; color: #FFF;">SICDOC</a></div>
+        <div class="introHead2" style="left: 1200px;"><a href="http://iiti.ac.in/SIC/" style="text-decoration: none; color: #FFF; font-size: 12px">Sophisticated Instrumentation Lab</a></div>
+        
+        <div style="position: relative; top: 17px; left: 250px;">
+                <form class="search" action="../../Search.php" method="POST">
+                  <input type="search" placeholder="Search here..." required>
+                  <button type="submit">Search</button>
+                </form>   
             </div>
-
-        <script src="js/classie.js"></script>
-        <script src="js/uisearch.js"></script>
-        <script>
-            new UISearch( document.getElementById( 'sb-search' ) );
-        </script>
         
     </div>
-
-    <button class="submit" onClick="javascript:window.location.href ='../../Login_form.php'" style="position: fixed; width:150px; height:50px; top: 120px; font-size: 18px; font-weight: normal; color: #fff; text-shadow: 0 1px #e3f1f1; background: #00cc66; border: 1px solid; border-color: #b4ccce #b3c0c8 #9eb9c2;">Back to Home</button>
+    <div style="position: absolute; top:120px; width: 0; height: 0; border-top: 26px solid transparent; border-bottom: 24px solid transparent; border-right:24px solid #00cc66;"></div>
+    <button class="submit" onClick="javascript:window.location.href ='../../Login_form.php'" style="position: fixed; left:24px; width:150px; height:50px; top: 120px; font-size: 18px; font-weight: normal; color: #fff; text-shadow: 0 1px #e3f1f1; background: #00cc66; border: 1px solid; border-color: #b4ccce #b3c0c8 #9eb9c2; border-left: 0px;">Back to Home</button>
     
     <div id="wrapper" style="position: absolute; top:20px; left:240px; width: 800px; height: 700px;">
         <div class="slider-wrapper theme-default">

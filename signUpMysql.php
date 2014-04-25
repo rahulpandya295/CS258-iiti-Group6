@@ -3,6 +3,12 @@
 
 require_once 'connection.php';
 
+function maniP ($str){
+	$str = stripslashes($str);
+	$str = mysql_real_escape_string($str);
+	return $str;
+}
+
 if(!mysql_ping()){
 	die();
 }
@@ -18,22 +24,12 @@ $psWord = $_POST['psWord'];
 $phone_no = $_POST['phoneno'];
 $email = $_POST['email'];
 
-$fName = stripslashes($fName);
-$lName = stripslashes($lName);
-$uName = stripslashes($uName);
-$psWord = stripslashes($psWord);
-$phone_no = stripslashes($phone_no);
-$email = stripslashes($email);
-
-
-
-
-$fName = mysql_real_escape_string($fName);
-$lName = mysql_real_escape_string($lName);
-$uName = mysql_real_escape_string($uName);
-$psWord = mysql_real_escape_string($psWord);
-$phone_no = mysql_real_escape_string($phone_no);
-$email = mysql_real_escape_string($email);
+$fName = maniP($fName);
+$lName = maniP($lName);
+$uName = maniP($uName);
+$psWord = maniP($psWord);
+$phone_no = maniP($phone_no);
+$email = maniP($email);
 
 $len=strlen($psWord);
 $len = 3*$len*$len -2;
@@ -57,21 +53,21 @@ $dobDay = $_POST['dob_day'];
 $dobMonth = $_POST['dob_month'];
 $dobYear = $_POST['dob_year'];
 
-$uploadStr = "INSERT INTO $tableName (`id`, `First Name`, `Last Name`, `username`, `password`, `gender` , `imagePath` ,`dob_day` , `dob_month` , `dob_year` , `field` , `email`, `phone_no`) VALUES (NULL , '$fName', '$lName' , '$uName' , '$psWord' , '$gender', '$filePath' , '$dobDay' , '$dobMonth' , '$dobYear' , '$val' , '$email' , '$phone_no')";
+$uploadStr = "INSERT INTO `members` (`id`, `First Name`, `Last Name`, `username`, `password`, `gender` , `imagePath` ,`dob_day` , `dob_month` , `dob_year` , `field` , `email`, `phone_no`) VALUES (NULL , '$fName', '$lName' , '$uName' , '$psWord' , '$gender', '$filePath' , '$dobDay' , '$dobMonth' , '$dobYear' , '$val' , '$email' , '$phone_no')";
 
 //$uploadStr=mysql_real_escape_string($uploadStr);
 //mysql_query($uploadStr , $con) or die(mysql_error());
 session_start();
-if(mysql_query($uploadStr , $con)){
-	mysql_close($con);
-	$_SESSION['successSignUp']=1;
-	header("location: Login_form.php");
-	die();
-}else{
-	mysql_close($con);
-	$_SESSION['errorSignUp']=1;
-	header("location: signUp.php");
-}
+	if(mysql_query($uploadStr , $con)){
+		mysql_close($con);
+		$_SESSION['successSignUp']=1;
+	}else{
+		mysql_close($con);
+		$_SESSION['errorSignUp']=1;
+	}
+
+	header("location: settings.php");
+	
 }
 
 ?>

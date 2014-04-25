@@ -26,19 +26,27 @@ require_once 'connection.php';
 	<link rel="stylesheet" type="text/css" href="css/iframe.css"/>
 	<link rel="stylesheet" type="text/css" href="css/search1.css" />
 	<link rel="stylesheet" type="text/css" href="css/search2.css" />
-
-	<script src="js/modernizr.custom.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/Search.css" />
 </head>
 <body>
 
 	<!--Header Bar-->
 	<div class="introBar">
-		<div class="introHead1">SICDOC</div>
-		<div class="introHead2"> Sophisticated Instrumentation Lab </div>
-
+    	<div class="introHead1"><a href="Login_form.php" style="text-decoration: none; color: #FFF;">SICDOC</a></div>
+	    <div class="introHead2" style="left: 1200px;"><a href="http://iiti.ac.in/SIC/" style="text-decoration: none; color: #FFF;">Sophisticated Instrumentation Lab</a></div>
+			
+			<div style="position: relative; top: 17px; left: 250px;">
+	    		<form class="search" action="Search.php" method="POST">
+				  <input type="search" name="search" placeholder="Search here..." required>
+				  <button type="submit">Search</button>
+				</form>   
+			</div>
+		
+		</div>
+		<!--
 		<div class="column">
 					<div id="sb-search" class="sb-search">
-						<form>
+						<form method="POST" action="Search.php">
 							<input class="sb-search-input" placeholder="Enter your search query" type="text" value="" name="search" id="search">
 							<input class="sb-search-submit" type="submit" value="">
 							<span class="sb-icon-search"></span>
@@ -52,7 +60,8 @@ require_once 'connection.php';
 			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
 		
-	</div>
+		
+		-->
 	<!--End of Header Bar-->
 
 	<!--SideBar Contents-->
@@ -79,19 +88,26 @@ require_once 'connection.php';
 		
 		<div class="seperatorinbox" style="position: absolute;  top: 410px;  left: 12px;"></div>
 		
-		<a href="View_history.html" style="text-decoration: none" >
+		<a href="View_profile.php" style="text-decoration: none" >
 			<img src="images/viewhistory.png" width="15" height="15" style="position: absolute; top: 385px; left: 24px;">
-			<div class="sidebartext" style=" position: absolute;  top: 371px;  left: 40px;">View History</div>
+			<div class="sidebartext" style=" position: absolute;  top: 371px;  left: 40px;">Profile</div>
 		</a>	
 		
-		<a href="Settings.html" style="text-decoration: none">
+		<div class="seperatorinbox" style="position: absolute;  top: 450px;  left: 12px;"></div>
+
+		<a href="settings.php" style="text-decoration: none">
    			<img src="images/settings.png" width="15" height="15" style="position: absolute; top: 425px; left: 23px;">
    			<div class="sidebartext" style=" position: absolute;  top: 411px;  left: 40px;">Settings</div>
    		</a>
    		
+   		<a href="sliderGallery/Slider/index.html" style="text-decoration: none">
+   			<img src="images/notification_blue.png" width="15" height="15" style="position: absolute; top: 465px; left: 23px;">
+   			<div class="sidebartext" style=" position: absolute;  top: 451px;  left: 40px;">Gallery</div>
+   		</a>
+
 	</section>
 	<!--End of Sidebar Content-->
-	<button href="Logout.php" class="logout">Logout</button>
+	<button class="logout" onClick="javascript:window.location.href ='logout.php'">Logout</button>
 </body>
 
 </html>

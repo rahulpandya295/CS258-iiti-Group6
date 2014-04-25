@@ -1,82 +1,66 @@
 <?php
-
-	if(isset($_SESSION['pwChangeError'])){
-		if($_SESSION['pwChangeError'] == 1){
-			echo "<script type='text/javascript'>alert('Please try again!')</script>";	
-		}
-		else{
-			echo "<script type='text/javascript'>alert('Wrong Password!')</script>";
-		}
-		unset($_SESSION['pwChangeError']);
-	}
-
-	if(isset($_SESSION['pwUnmatch'])){
-		echo "<script type='text/javascript'>alert('Password did not match!')</script>";
-		unset($_SESSION['pwUnmatch']);
-	}
-
 require_once 'connection.php';
+
 	session_start();
 
     $uname = $_SESSION['usr'];
     $uname = stripslashes($uname);
     $uname = mysql_real_escape_string($uname);
+    
     $result = mysql_query("SELECT * FROM members WHERE username = '$uname'");
     $nameAdmin = mysql_fetch_row($result);
-
 ?>
 
-<!DOCTYPE html>
 <html>
-
 <head>
+	<link rel="stylesheet" type="text/css" href="css/Form1.css"/>
+	<link rel="stylesheet" type="text/css" href="css/signup.css"/>
+	<link rel="stylesheet" type="text/css" href="css/forgotPw.css"/>
 	<link rel="stylesheet" type="text/css" href="css/Admin.css"/>
-	<link rel="stylesheet" type="text/css" href="css/Form.css"/>
 	<link rel="stylesheet" type="text/css" href="css/iframe.css"/>
 	<link rel="stylesheet" type="text/css" href="css/search1.css" />
 	<link rel="stylesheet" type="text/css" href="css/search2.css" />
 	<link rel="stylesheet" type="text/css" href="css/Layout0.css"/>
-	<link rel="stylesheet" type="text/css" href="css/signup.css"/>
-	<script src="js/modernizr.custom.js"></script>
-
+	<script src="js/modernizr.custom.js"></script>	
 </head>
 
 <body>
-
+	<!--Header Bar-->
 	<div class="introBar">
 		<div class="introHead1"><a href="Login_form.php" style="text-decoration: none; color: #FFF;">SICDOC</a></div>
 	    <div class="introHead2" style="left: 1200px;"><a href="http://iiti.ac.in/SIC/" style="text-decoration: none; color: #FFF;">Sophisticated Instrumentation Lab</a></div>
-			
+
 		<div style="position: relative; top: 17px; left: 250px;">
 	    		<form class="search" action="Search.php" method="POST">
-				  <input type="search" name="search" placeholder="Search here..." required>
+				  <input type="search" placeholder="Search here..." required>
 				  <button type="submit">Search</button>
 				</form>   
 			</div>
 		
-
-	</div> 
-	<div style="position: absolute; top: 100px; left:100px;">
-	<section class="container">
-		<img src="images/sexperiment.png" width="25" height="25" style="position: absolute; top: 55px; left: 45px;">
-		<h1 style="width: 300px;">Change Password</h1>
-		<div class="seperator" style="position: absolute; left: 40px; top: 100px;  width: 500px;"></div>
-		
-		<form method="POST" action="ChangePwMysql.php" enctype="multipart/form-data">
-			<input type="password" required title="Current Password" placeholder="Current Password" data-icon="x" id="oldPw" name="oldPw" style="position: absolute; top: 150px; left: 30px;">
-			<input type="password" required title="New Password" placeholder="New Password" data-icon="y" id="newPw" name="newPw" style="position: absolute; top: 220px; left: 30px;">
-			<input type="password" required title="Confirm Password" placeholder="Confirm New Password" data-icon="z" id="confirmPw" name="confirmPw" style="position: absolute; top: 220px; left: 300px;">
-			<div class="submit">
-			<input type="submit" name="commit" value="Submit" style="position: absolute; top: 350px; left: 65px;"></div>
-		</form>
-	</section>
 	</div>
+	<!--End of Header Bar-->
+
+	<!--Delete User-->
+	<section class="pwResetbox" style="left: 180px;">
+		<div class="resetText">Delete User</div>
+		<div class="seperatorS"></div>
+		
+	<form method="POST" action="removeUserMysql.php" enctype="multipart/form-data">
+
+		<input type="text" style="width:330px; position: absolute; top: 192px; left: 50px; height: 50px;" required title="Username required" placeholder="Username" data-icon="N" id="name" name="uname">
+		<input type="password" required title="Admin Password" placeholder="Admin Password" data-icon="x" id="adminpword" name="adminpword" style="position: absolute; top: 275px; left: 50px; height: 50px; width: 330px;">
+
+		<input type="submit" name="submit" value="Submit" style="position: absolute; top: 390px; left: 220px;">
+	</form>
+	</section>
+	<!--End of Delte User-->
+
+	<!--SideBar Contents-->
 	<section class="sidebar">
 		<div class="imagebox"><img src='<?php echo $nameAdmin[6];?>' width="180" height="180"></div>
 		
 		<div class="seperatorinbox" style="position: absolute;  top: 230px;  left: 12px;"></div>
 		<div class="sidebartext" style=" position: absolute;  top: 231px;  left: 40px; text-align: center; padding-left: 0px; width: 140px;"><?php echo $nameAdmin[1]." ".$nameAdmin[2]; ?></div>
-
 		<div class="seperatorinbox" style="position: absolute;  top: 270px;  left: 12px;"></div>
 		
 		<div class="seperatorinbox" style="position: absolute;  top: 330px;  left: 12px;"></div>
@@ -100,13 +84,21 @@ require_once 'connection.php';
 			<div class="sidebartext" style=" position: absolute;  top: 371px;  left: 40px;">View History</div>
 		</a>	
 		
+		<div class="seperatorinbox" style="position: absolute;  top: 450px;  left: 12px;"></div>
+
 		<a href="Settings.html" style="text-decoration: none">
    			<img src="images/settings.png" width="15" height="15" style="position: absolute; top: 425px; left: 23px;">
    			<div class="sidebartext" style=" position: absolute;  top: 411px;  left: 40px;">Settings</div>
    		</a>
    		
+
+   		<a href="sliderGallery/Slider/index.html" style="text-decoration: none">
+   			<img src="images/notification_blue.png" width="15" height="15" style="position: absolute; top: 465px; left: 23px;">
+   			<div class="sidebartext" style=" position: absolute;  top: 451px;  left: 40px;">Gallery</div>
+   		</a>
+
 	</section>
+	<!--End of Sidebar Content-->
 	<button class="logout" onClick="javascript:window.location.href ='logout.php'">Logout</button>
 </body>
-
 </html>
